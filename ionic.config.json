@@ -1,0 +1,7 @@
+{
+  "name": "gestallerapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
