@@ -1,8 +1,25 @@
-import { IonPage, IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonInput, IonButton, IonText } from '@ionic/react';
-import { useHistory } from 'react-router';
+import React from 'react';
+import {
+  IonPage,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+  IonItem,
+  IonLabel,
+  IonInput,
+  IonButton
+} from '@ionic/react';
+import { useHistory } from 'react-router-dom';
 
 const Login: React.FC = () => {
   const history = useHistory();
+
+  const manejarLogin = () => {
+    // aquí podrías validar usuario/clave, por ahora solo navega
+    history.push('/tabs/agendar');
+  };
+
   return (
     <IonPage>
       <IonHeader>
@@ -10,25 +27,33 @@ const Login: React.FC = () => {
           <IonTitle>Login</IonTitle>
         </IonToolbar>
       </IonHeader>
+
       <IonContent className="ion-padding">
         <IonItem>
-          <IonLabel position="stacked">Nombre</IonLabel>
-          <IonInput placeholder="Luis Delgado Aguilera" />
+          <IonLabel position="stacked">Correo</IonLabel>
+          <IonInput type="email" placeholder="usuario@correo.com" />
         </IonItem>
+
         <IonItem>
-          <IonLabel position="stacked">Password</IonLabel>
-          <IonInput type="password" />
+          <IonLabel position="stacked">Contraseña</IonLabel>
+          <IonInput type="password" placeholder="****" />
         </IonItem>
-        <IonButton expand="block" className="ion-margin-top" onClick={() => history.push('/tabs/agendar')}>
+
+        <IonButton expand="block" className="ion-margin-top" onClick={manejarLogin}>
           Ingresar
         </IonButton>
-        <IonText>
-          <p style={{ textAlign: 'center', marginTop: 16 }}>
-            ¿No tienes cuenta? <a onClick={() => history.push('/crear-cuenta')}>Crear cuenta</a>
-          </p>
-        </IonText>
+
+        <IonButton
+          expand="block"
+          fill="clear"
+          className="ion-margin-top"
+          routerLink="/crear-cuenta"
+        >
+          Crear cuenta
+        </IonButton>
       </IonContent>
     </IonPage>
   );
 };
+
 export default Login;
