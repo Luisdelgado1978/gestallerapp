@@ -1,4 +1,4 @@
-# Trabajo Unidad 4 - Parte A
+# Readme-Parte A del Trabajo Unidad 4 Aplicacion funcionando
 ## Aplicacion Movil con Ionic + React
 ### Estudiante: Luis Delgado Aguilera
 
@@ -64,11 +64,11 @@ npm install
 
 ### 3.ejecutar en modo desarrollo
 
-npm run dev
+Ionic serve
 
 la aplcacion de abrira en:
 
-http://localhost:5173/
+http://localhost:8100/
 
 ## funcionamiento correcto
 antes de subir esta entrega se verifico que:
