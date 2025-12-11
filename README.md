@@ -56,7 +56,7 @@ con esto se cumple el requerimiento de utilizar al menos dos componentes nuevos 
 ### 1. clonar el repositorio
 
 git clone
-https://github.com/luisdelgado1978/gestallerapp.git
+https://github.com/luisdelgado1978/gestallerapp
 
 ### 2.instalar dependencias
 
@@ -95,6 +95,15 @@ git push origin master
 ## repositorio del proyecto
 link oficial:
 https://github.com/luisdelgado1978/gestallerapp/
+
+
+# README parte B del trabajo unidad 4 (pendiente)
+en esta seccion agregaremos 
+- nuevos componentes
+- mejoras en funcionalidades
+- generacion del APK
+- nuevos problemas y soluciones
+
 
 
 
