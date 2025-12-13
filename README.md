@@ -105,7 +105,54 @@ en esta seccion agregaremos
 - nuevos problemas y soluciones
 
 
+## README - Parte B del Trabajo Unidad 4 desarrollo Final de la aplicacion
+ esta es la segunda parte del trabajo se completo el desarrollo de la aplicacion movil, incorporando mejoras visuales, interaccion con el usuario y nuevos componentes de ionic, cumpliendo con los requisitos establecidos para la unidad 4.
 
+ ### Objetivos de la parte B
+ finalizar el 50% restante de la aplicacion, mejorar la experiencia de usuario y aplicar componentes adicionales del framework Ionic.
 
+ ---
+
+ ### Componentes ionic Utilizados en la Parte B
+ durante esta etapa se incorporaron los siguientes componentes:
+
+ - IonicToast
+ utilizado en las pantallas de login, Estado y presupuesto para mostrar mensajes informativos y de validacion de forma clara y visible.
+
+ - IonModal 
+ implementado en la pantalla historial para mostrar el detalle de servicios realizados, mejorando la navegacion y presentacion de la informacion.
+ ademas, se reforzo el uso de componentes como:
+ - IonCard
+ - IonList
+ - IonButton
+ - IonText
+
+ ---
+
+ ### Funcionalidades Desarrolladas
+ - validacion de campos en login.
+ - Mensajes de Retroalimentacion al usuario (Exito, advertencia).
+ - Visualizacion del estado actual del vehiculo.
+ - aprobacion o solicitud de cambios en el presupuesto.
+ - consulta de historial de servicios con vista de detalle mediante Modal.
+ - Navegacion fluida mediante Tabs.
+
+ ---
+
+ ### Correcciones y mejoras visuales
+ - correcciones de estilo ionic mediante carga adecauada de CSS en Main.tsx
+ - Alineacion y presentacion consistente en todas las pantallas.
+ - eliminacion de superpocicion de mensajes en pantalla.
+ - Interfaz responsiva y clara.
+
+ ---
+
+ ### estado Final Del Proyecto
+ La aplicacion se encuentra completamente funcional, cumpliendo con los requicitos solicitados para la parte A y parte B de la unidad 4, lista para su evaluacion.
+
+ Repositorio del Proyecto:
+
+ https://github.com/luisdelgado1978/gestallerapp
+ 
 
 
