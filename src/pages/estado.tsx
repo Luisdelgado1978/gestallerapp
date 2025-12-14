@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   IonPage,
   IonHeader,
@@ -8,45 +8,58 @@ import {
   IonCard,
   IonCardHeader,
   IonCardTitle,
-  IonCardContent
+  IonCardContent,
+  IonText,
+  IonButton,
+  IonToast
 } from '@ionic/react';
 
 const Estado: React.FC = () => {
+  const [showToast, setShowToast] = useState(false);
+
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Estado del taller</IonTitle>
+          <IonTitle>Estado del vehículo</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent className="ion-padding">
-        <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>Trabajos para hoy</IonCardTitle>
-          </IonCardHeader>
-          <IonCardContent>
-            3 vehículos agendados para mantenimiento preventivo.
-          </IonCardContent>
-        </IonCard>
 
         <IonCard>
           <IonCardHeader>
-            <IonCardTitle>En ejecución</IonCardTitle>
+            <IonCardTitle>Estado actual</IonCardTitle>
           </IonCardHeader>
+
           <IonCardContent>
-            2 reparaciones de motor y 1 cambio de frenos en proceso.
+            <IonText>
+              <p><strong>Vehículo:</strong> En taller</p>
+              <p><strong>Estado:</strong> En mantención</p>
+              <p><strong>Última actualización:</strong> Hoy</p>
+            </IonText>
+
+            <IonButton
+              expand="block"
+              color="primary"
+              className="ion-margin-top"
+              onClick={() => setShowToast(true)}
+            >
+              Ver actualización
+            </IonButton>
           </IonCardContent>
         </IonCard>
 
-        <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>Entregados</IonCardTitle>
-          </IonCardHeader>
-          <IonCardContent>
-            5 vehículos entregados en las últimas 24 horas.
-          </IonCardContent>
-        </IonCard>
+        {/* TOAST CENTRADO ABAJO */}
+        <IonToast
+          isOpen={showToast}
+          message="🛠️ El vehículo está siendo revisado por el taller."
+          duration={2500}
+          position="bottom"
+          color="success"
+          onDidDismiss={() => setShowToast(false)}
+        />
+
       </IonContent>
     </IonPage>
   );
