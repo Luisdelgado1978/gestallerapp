@@ -154,5 +154,10 @@ en esta seccion agregaremos
 
  https://github.com/luisdelgado1978/gestallerapp
  
+---
 
+## APK de la aplicacion
+el archivo Apk generado de la aplicacion se encuentra disponible en la carpeta:
+/apk/app-debug.apk
 
+este APK corresponde a la version compilada de la aplicacion movil desarrollada en Ionic + React, lista para ser instalada en dispositivos android con la opcion de origenes desconosidos habilitada.
