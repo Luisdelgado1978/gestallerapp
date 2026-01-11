@@ -161,3 +161,56 @@ el archivo Apk generado de la aplicacion se encuentra disponible en la carpeta:
 /apk/app-debug.apk
 
 este APK corresponde a la version compilada de la aplicacion movil desarrollada en Ionic + React, lista para ser instalada en dispositivos android con la opcion de origenes desconosidos habilitada.
+
+## APLICACION MOVIL- CONSUMO DE API CON IONIC REACT
+# DESCRIPCION DEL PROYECTO
+este proyecto corresponde al desarrollo de una aplicacion movil utilizando Ionic framework con React, cuyo objetivo principal es consumir una API externa mediantes peticiones HTTP y mostrar la informacion obtenida dentro de la aplicacion.
+la aplicacionobtiene datos desde un servicio API REST publico, los muestra inicialmente en formato crudo(json) y posteriormente en formato estructurado, facilitando su lectura para el usuario.
+
+## OBJETIVO DEL PROYECTO
+· consumir una API REST externa utilizando el metodo HTTP GET.
+· Mostrar los datos en formato crudo (json).
+· Procesar ypresentar los datos en formato estrcuturado.
+· implementar manejo de errores HTTP.
+· Aplicar buenas practicas de desarrollo y separacion de logica mediante servicios.
+
+## TECNOLOGIAS UTILIZADAS
+· Ionic Framework
+· React
+· Type Script
+· Fetch API (peticiones HTTP).
+· API externa JSONplaceholder
+
+## API UTILIZADA
+nombre: JSONplaceholder
+Tipo: API REST publica
+Formato: JSON
+URL: https://jsonplaceholder.typicode.com/posts
+
+## ARQUITECTURA DEL PROYECTO
+la aplicacion esta desarrollada en ionic react. por lo que no utiliza appmodule ni httpclientmodule, los vcuales son propios de angular.
+para cumplir con el objetivo de integracion HTTP:
+· se impemento un servciio independiente ubicado en src/services/api.ts
+· consumo de la api se realiza mediante la funcion fetch.
+· la respuesta es procesada de forma asincronica.
+
+# ESTRUCTURA RELEVANTE DEL PROYECTO
+src/pages/ApiPosts.tsx
+de consumo de la api (pantalla)
+src/services/api.ts
+de conexion a la api (servicio).
+
+## FUNCIONALIDADES PRINCIPALES 
+· conexion a una API REST externa
+· visualizacion de datos estructurados (titulo y descripcion)
+· manejo de errores HTTP (ejemplo 404 not found)
+· interfaz desarrollada con componentes ionic.
+
+## MANEJO DE ERRORES
+la aplicacion incoorpora manejo de errores en caso de fallas en la conexion con la api. cuando ocurre un error HTTP, se muestra un mensaje informativo al usuario indicando el problema detectado.
+
+## EJECUCION DEL PROYECTO
+ionic serve
+
+## OBSERVACIONES
+este proyecto fue desarrollado con fines academicos como parte del trabajo final de la unidad 5 de la asignatura taller de dispositivos moviles.

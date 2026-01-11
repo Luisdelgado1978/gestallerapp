@@ -1,8 +1,18 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+export type Post = {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+};
 
-test('renders without crashing', () => {
-  const { baseElement } = render(<App />);
-  expect(baseElement).toBeDefined();
-});
+const BASE_URL = "https://jsonplaceholder.typicode.com";
+
+export async function getPosts(): Promise<Post[]> {
+  const resp = await fetch('${BASE_URL}/posts');
+
+  if (!resp.ok) {
+    throw new Error("Error al consultar la API");
+  }
+
+  return resp.json();
+}

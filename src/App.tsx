@@ -11,8 +11,8 @@ import {
 
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
-
-import { calendarOutline, speedometerOutline, timeOutline, cashOutline } from 'ionicons/icons';
+import ApiPosts from "./pages/ApiPosts";
+import { calendarOutline, speedometerOutline, timeOutline, cashOutline,listOutline } from 'ionicons/icons';
 
 /* importa tus páginas */
 import Login from './pages/Login';
@@ -43,7 +43,6 @@ const App: React.FC = () => {
         <IonRouterOutlet id="main">
           <Route path="/login" component={Login} exact />
           <Route path="/crear-cuenta" component={CrearCuenta} exact />
-
           {/* Contenedor de tabs */}
           <Route path="/tabs">
             <IonTabs>
@@ -51,6 +50,7 @@ const App: React.FC = () => {
                 <Route path="/tabs/agendar" component={Agendar} exact />
                 <Route path="/tabs/estado" component={Estado} exact />
                 <Route path="/tabs/historial" component={Historial} exact />
+                <Route path="/tabs/api-posts" component={ApiPosts} exact />
                 <Route path="/tabs/presupuesto" component={Presupuesto} exact />
                 <Redirect exact from="/tabs" to="/tabs/agendar" />
               </IonRouterOutlet>
@@ -69,6 +69,11 @@ const App: React.FC = () => {
                 <IonTabButton tab="historial" href="/tabs/historial">
                   <IonIcon icon={timeOutline} />
                   <IonLabel>Historial</IonLabel>
+                </IonTabButton>
+
+                <IonTabButton tab="api" href="/tabs/api-posts">
+                <IonIcon icon={listOutline} />
+                <IonLabel>API</IonLabel>
                 </IonTabButton>
 
                 <IonTabButton tab="presupuesto" href="/tabs/presupuesto">
